@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55D0B28C-8796-4C73-9556-6E611AAD23F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>M1</RootNamespace>
+    <AssemblyName>M1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alterar_forn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterar_forn.Designer.cs">
+      <DependentUpon>alterar_forn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alterar_forn2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterar_forn2.Designer.cs">
+      <DependentUpon>alterar_forn2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alterar_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterar_prod.Designer.cs">
+      <DependentUpon>alterar_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alterar_prod2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterar_prod2.Designer.cs">
+      <DependentUpon>alterar_prod2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cad_forn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cad_forn.Designer.cs">
+      <DependentUpon>cad_forn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cad_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cad_login.Designer.cs">
+      <DependentUpon>cad_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cad_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cad_prod.Designer.cs">
+      <DependentUpon>cad_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cad_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cad_user.Designer.cs">
+      <DependentUpon>cad_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="caixa.Designer.cs">
+      <DependentUpon>caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="caixa2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="caixa2.Designer.cs">
+      <DependentUpon>caixa2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cargo.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="conexao.cs" />
+    <Compile Include="Conexao2.cs" />
+    <Compile Include="controle_estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controle_estoque.Designer.cs">
+      <DependentUpon>controle_estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dados.cs" />
+    <Compile Include="del_forn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="del_forn.Designer.cs">
+      <DependentUpon>del_forn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="del_ped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="del_ped.Designer.cs">
+      <DependentUpon>del_ped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="del_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="del_prod.Designer.cs">
+      <DependentUpon>del_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="del_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="del_user.Designer.cs">
+      <DependentUpon>del_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs" />
+    <Compile Include="Forn.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="log.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manter_usuarios.cs" />
+    <Compile Include="novo_pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="novo_pedido.Designer.cs">
+      <DependentUpon>novo_pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedido.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rela_forn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rela_forn.Designer.cs">
+      <DependentUpon>rela_forn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rela_prod_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rela_prod_prod.Designer.cs">
+      <DependentUpon>rela_prod_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rel_ped.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rel_ped.Designer.cs">
+      <DependentUpon>rel_ped.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rel_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rel_user.Designer.cs">
+      <DependentUpon>rel_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unidade.cs" />
+    <Compile Include="Usuarios.cs" />
+    <EmbeddedResource Include="alterar_forn.resx">
+      <DependentUpon>alterar_forn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alterar_forn2.resx">
+      <DependentUpon>alterar_forn2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alterar_prod.resx">
+      <DependentUpon>alterar_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alterar_prod2.resx">
+      <DependentUpon>alterar_prod2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cad_forn.resx">
+      <DependentUpon>cad_forn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cad_login.resx">
+      <DependentUpon>cad_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cad_prod.resx">
+      <DependentUpon>cad_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cad_user.resx">
+      <DependentUpon>cad_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="caixa.resx">
+      <DependentUpon>caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="caixa2.resx">
+      <DependentUpon>caixa2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controle_estoque.resx">
+      <DependentUpon>controle_estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="del_forn.resx">
+      <DependentUpon>del_forn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="del_prod.resx">
+      <DependentUpon>del_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="del_user.resx">
+      <DependentUpon>del_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="novo_pedido.resx">
+      <DependentUpon>novo_pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rela_forn.resx">
+      <DependentUpon>rela_forn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rela_prod_prod.resx">
+      <DependentUpon>rela_prod_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rel_ped.resx">
+      <DependentUpon>rel_ped.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rel_user.resx">
+      <DependentUpon>rel_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_ciclo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_ciclo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chave2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chave21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chave3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barramenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refrigerante_antartica_guaran_pet_2l_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANELA.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

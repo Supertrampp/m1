@@ -1,0 +1,99 @@
+nome do banco de dados => crud
+
+
+create table produtos(
+	codigo serial primary key,
+	descricao varchar(30) not null,
+	cod_barras numeric(13),
+	preco numeric(5,2),
+	fornecedor varchar(40),
+	categoria varchar(40),
+	unidade varchar(2),
+        estoque numeric(3)
+);
+
+
+
+create table cmbcategoria(
+	id serial primary key,
+	descricao varchar(30)
+);
+insert into cmbCategoria(descricao)
+values('ESCOLAR'),('ESCRITORIO'),('ELETRONICO'),('INFORMATICA'),('PAPELARIA');
+
+
+
+create table cmbfornecedor(
+	id serial primary key,
+	descricao varchar(30)
+);
+insert into cmbfornecedor(descricao)
+values('KALUNGA'),('BIC'),('FABERCASTELL'),('SAMSUNG'),('POSITIVO');
+
+
+
+create table Unidade(
+	id serial primary key,
+	descricao varchar(2)
+
+);
+insert into Unidade(descricao)
+values('PC'),('UN'),('PT'),('EM');
+
+
+
+create table forn(
+	codigo serial primary key,
+	descricao varchar(30),
+	endereco varchar(30),
+	estado varchar(2),
+	cidade varchar(30),
+	telefone varchar(13)
+);
+
+
+create table estado(
+	id serial primary key,
+	descricao varchar(2)
+);
+insert into estado(descricao)
+values('SP'),('RJ'),('MG'),('RS');
+
+
+create table usuarios(
+	codigo serial primary key,
+	login varchar(10),
+	senha varchar(10),
+	cargo varchar(10)
+);
+insert into usuarios(login,senha,cargo)
+values('joao','123','3');
+
+create table cargo(
+	id serial primary key,
+	descricao varchar(10)
+);
+insert into cargo(descricao)values('ADM'),('CAIXA'),('GERENTE');
+
+
+create table pedido(
+	codigo serial primary key,
+	produto1 varchar(30),
+	qtd1 numeric(3),
+	produto2 varchar(30),
+	qtd2 numeric(3),
+	produto3 varchar(30),
+	qtd3 numeric(3),
+	produto4 varchar(30),
+	qtd4 numeric(3),
+	produto5 varchar(30),
+	qtd5 numeric(3),
+	fornecedor varchar(30),
+	endfor varchar(30),
+	telfor varchar(15),
+	nome varchar(30),
+	endemp varchar(30),
+	telemp varchar(15)
+);
+
+
